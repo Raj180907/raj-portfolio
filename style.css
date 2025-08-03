@@ -1,7 +1,9 @@
 :root {
-  --primary: #ff4d67;
-  --bg: #111;
-  --text: #fff;
+  --bg: #FFF8F0;
+  --text: #2E2E2E;
+  --pink: #F4ACB7;
+  --mint: #9AD0C2;
+  --mustard: #FFE066;
 }
 
 * {
@@ -11,69 +13,89 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 header {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to right, #111, #1f1f1f);
+  padding: 5rem 2rem;
+  background: linear-gradient(120deg, var(--mint), var(--pink));
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(244, 172, 183, 0.2);
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: var(--primary);
+  font-size: 3rem;
+  color: var(--text);
 }
 
 p {
   margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--text);
 }
 
 .button {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--mustard);
+  color: var(--text);
+  border: none;
   font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.button:hover {
+  background-color: #ffd54f;
+  transform: translateY(-2px);
 }
 
 section {
-  padding: 4rem 2rem;
-  border-top: 1px solid #333;
+  padding: 4rem 0;
+  border-top: 1px solid #eee;
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
+  margin-bottom: 1.5rem;
+  color: var(--pink);
 }
 
 ul {
-  list-style: square;
-  margin-left: 1.5rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: var(--mint);
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(154, 208, 194, 0.3);
+  font-weight: 500;
 }
 
 a {
-  color: var(--primary);
+  color: var(--pink);
   text-decoration: none;
+  font-weight: 600;
 }
 
 footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background-color: #000;
+  padding: 2rem 0;
+  font-size: 0.95rem;
   color: #777;
 }
