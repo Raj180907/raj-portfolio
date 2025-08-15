@@ -4,134 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raj | Flutter Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/raj.jpg" />
   <style>
-    html {
+    :root {
+      --mint: #AAF0D1;
+      --offwhite: #FEFEFA;
+      --dark: #2C2C2C;
+    }
+    * {
+      margin: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background-color: var(--offwhite);
+    }
+    section, header {
+      min-height: 100vh;
+      padding: 6rem 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -1px;
+    }
+    header {
+      background: var(--mint);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: .5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    header a {
+      padding: .7rem 2rem;
+      background: var(--dark);
+      color: var(--offwhite);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    section h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    /* Projects */
+    #projects ul { list-style: none; }
+    #projects li {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    #projects a { color: var(--dark); font-weight: bold; }
+
+    /* certifications grid */
+    .cert-grid, .travel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 2rem;
+    }
+    .cert-card, .travel-card {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(0,0,0,.08);
+      position: relative;
+      background:#fff;
+      transition: transform .3s;
+    }
+    .cert-card:hover, .travel-card:hover { transform: translateY(-6px); }
+    .cert-card img, .travel-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .cert-info, .travel-info {
+      padding: 1rem;
+      font-size: .9rem;
+    }
+    /* contact */
+    #contact a {
+      color: var(--dark);
+      font-weight: 500;
+    }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      background: var(--mint);
+      color: var(--dark);
+      font-size: .9rem;
+    }
+    @media (max-width:600px){
+      header h1 { font-size: 3rem }
+      section h2 { font-size: 2.4rem }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>👋 Hi, I'm Raj</h1>
-      <p>Flutter Developer • Dreamer • Code Nomad</p>
-      <a class="button" href="#projects">Check Out My Work</a>
-    </div>
-  </header>
+<header>
+  <h1>Raj</h1>
+  <p>Flutter Developer, Creator & Explorer designing stories in code and collecting them through travel.</p>
+  <a href="#projects">Dive In ↓</a>
+</header>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I build beautiful, scalable Flutter apps that blend performance with design. I love turning ideas into smooth, functional experiences. When I’m not coding, I’m either out exploring the world 🌍 or buried in a book with coffee.
-      </p>
-    </div>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>PringZ App</strong> — A Gen Z dating app built in Flutter + Firebase.<br>
+        <a href="#">View on GitHub</a></li>
+    <li><strong>Monthly Analytics Dashboard</strong> — Flutter dashboard with animated graphs.<br>
+        <a href="#">View on GitHub</a></li>
+    <li><strong>Laravel API Integration</strong> — Backend APIs for Flutter user app.<br>
+        <a href="#">View on GitHub</a></li>
+  </ul>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>PringZ App</strong> — A Gen Z dating app built in Flutter + Firebase with a slick UI and smooth swipe gestures.
-          <br />
-          <a href="https://github.com/yourusername/pringz">View on GitHub</a>
-        </li>
-        <li>
-          <strong>Monthly Analytics Dashboard</strong> — Designed a Flutter dashboard with graphs, charts, and animations for a business analytics app.
-          <br />
-          <a href="https://github.com/yourusername/analytics-dashboard">View on GitHub</a>
-        </li>
-        <li>
-          <strong>Laravel API Integration</strong> — Wrote backend PHP APIs for login/auth & user flow in a Flutter-powered mobile app.
-          <br />
-          <a href="https://github.com/yourusername/laravel-api">View on GitHub</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <div class="container">
-      <h2>Certifications</h2>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <img src="assets/certificate1.jpg" alt="Flutter Certificate">
-          <div class="cert-info">
-            <h3>Flutter Development Bootcamp</h3>
-            <p>Udemy · Jan 2025</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <img src="assets/certificate2.jpg" alt="Laravel API Certificate">
-          <div class="cert-info">
-            <h3>REST APIs with Laravel</h3>
-            <p>Coursera · Oct 2024</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <img src="assets/certificate3.jpg" alt="UX Certificate">
-          <div class="cert-info">
-            <h3>UI/UX for Developers</h3>
-            <p>Google UX Academy · Jul 2024</p>
-          </div>
-        </div>
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <img src="assets/certificate1.jpg" alt="Flutter">
+      <div class="cert-info">
+        <h3>Flutter Development Bootcamp</h3>
+        <p>Udemy · Jan 2025</p>
       </div>
     </div>
-  </section>
-
-  <!-- 🌍 Wanderlog Travel Section -->
-  <section id="wanderlog">
-    <div class="container">
-      <h2>Wanderlog</h2>
-      <p>Exploring cities, catching sunsets, and collecting stories. Here's a peek into my travels 🚀📸</p>
-      <div class="travel-grid">
-        <div class="travel-card">
-          <img src="assets/goa.jpg" alt="Goa Beach">
-          <div class="travel-info">
-            <h3>Goa, India</h3>
-            <p>Late night beach walks & sunrise chai with salty winds.</p>
-          </div>
-        </div>
-        <div class="travel-card">
-          <img src="assets/jaipur.jpg" alt="Jaipur Fort">
-          <div class="travel-info">
-            <h3>Jaipur</h3>
-            <p>Fort walls whispering Mughal tales and golden hour shots.</p>
-          </div>
-        </div>
-        <div class="travel-card">
-          <img src="assets/mountains.jpg" alt="Himalayas">
-          <div class="travel-info">
-            <h3>Himalayas</h3>
-            <p>Silence louder than words. Snow, stillness, and soul-searching.</p>
-          </div>
-        </div>
+    <div class="cert-card">
+      <img src="assets/certificate2.jpg" alt="API">
+      <div class="cert-info">
+        <h3>Laravel REST API</h3>
+        <p>Coursera · Oct 2024</p>
       </div>
     </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>📧 <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
-      <p>🔗 
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
-        <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
-      </p>
+    <div class="cert-card">
+      <img src="assets/certificate3.jpg" alt="UX">
+      <div class="cert-info">
+        <h3>UI/UX for Devs</h3>
+        <p>Google UX Academy · Jul 2024</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Raj. Built with Flutter dreams and pastel code ✨</p>
+<section id="wanderlog">
+  <h2>Wanderlog</h2>
+  <div class="travel-grid">
+    <div class="travel-card">
+      <img src="assets/goa.jpg" alt="Goa">
+      <div class="travel-info">
+        <h3>Goa</h3>
+        <p>Late-night beach walks & sunrise chai.</p>
+      </div>
     </div>
-  </footer>
+    <div class="travel-card">
+      <img src="assets/jaipur.jpg" alt="Jaipur">
+      <div class="travel-info">
+        <h3>Jaipur</h3>
+        <p>Timeless forts glowing under golden sky.</p>
+      </div>
+    </div>
+    <div class="travel-card">
+      <img src="assets/mountains.jpg" alt="Himalayas">
+      <div class="travel-info">
+        <h3>Himalayas</h3>
+        <p>Where silence speaks louder than words.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Connect</h2>
+  <p>📧 <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+  <p>🔗 <a href="#">GitHub</a> / <a href="#">LinkedIn</a></p>
+</section>
+
+<footer>
+  © 2025 Raj — Built with mint, code & curiosity ✨
+</footer>
 
 </body>
 </html>
-
